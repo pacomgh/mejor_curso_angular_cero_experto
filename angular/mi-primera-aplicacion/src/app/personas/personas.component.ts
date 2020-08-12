@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   //nombe del componente
   selector: 'app-personas',
   //plantilla html
-  templateUrl: './personas.component.html'
+  templateUrl: './personas.component.html',
+  //agrega hoja de estilos
+  styleUrls: ['./personas.component.css']
 })
 //se agrega export para exportar la clase y se pueda usar en otro paquete
 export class PersonasComponent{

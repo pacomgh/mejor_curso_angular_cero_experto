@@ -1,7 +1,18 @@
 <div class="container">
     <div class="row">
         <div class="col">
+            <!--
+            (click)->eventbinding, se usa para darle un metodo
+            [disabled]->property bindung, se usa para cambiar el estado de un bool
+            two way binding ([ngModule]) combina property y event binding
+            -->
+            <!--cada que proporcionamos un caracter debe leerlo el metodo
+              lo mandamos con un $event; (input)="onModificarPersona($event)"-->
+            <label for="">Titulo Pesona</label>
+            <input type="text" class="form-control" [(ngModel)]="tituloPersona"> {{tituloPersona}}
             <h1>Listado de personas</h1>
+            <button class="btn btn-primary" [disabled]="!agregarPersona " (click)="onCrearPersona() ">Agregar Persona</button>
+            <p>{{agregarPersonaStatus}}</p>
             <app-persona></app-persona>
         </div>
     </div>
